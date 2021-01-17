@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Basket GTM
+    <!-- Google Tag Manager -->
+     <script async="" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/gtm.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MCJW447');</script>
+     <!-- End Google Tag Manager -->
+
+     <script>
+        //capture any utm vars attached to the url and save to local storage
+        var $_GET = {};
+        if(document.location.toString().indexOf('?') !== -1) {
+           var query = document.location
+              .toString()
+              // get the query string
+              .replace(/^.*?\?/, '')
+              // and remove any existing hash string (thanks, @vrijdenker)
+              .replace(/#.*$/, '')
+              .split('&');
+
+           for(var i=0, l=query.length; i<l; i++) {
+              var aux = decodeURIComponent(query[i]).split('=');
+              $_GET[aux[0]] = aux[1];
+           }
+        }
+
+               if($_GET["utm_source"] != null) {
+                  localStorage.setItem('utm_source', $_GET["utm_source"]);
+               }
+
+              if($_GET["utm_medium"] != null) {
+                 localStorage.setItem('utm_medium', $_GET["utm_medium"]);
+              }
+
+              if($_GET["utm_campaign"] != null) {
+                 localStorage.setItem('utm_campaign', $_GET["utm_campaign"]);
+              }
+              if($_GET["utm_term"] != null) {
+                 localStorage.setItem('utm_term', $_GET["utm_term"]);
+              }
+              if($_GET["utm_content"] != null) {
+                 localStorage.setItem('utm_content', $_GET["utm_content"]);
+              }
+
+
+     </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+     <style>
+        .gfield_visibility_hidden {display: none}
+     </style>
+
+
+     <link href="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/style_002.css" rel="stylesheet">
+
+    <!-- Canonical Meta -->
+     <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Corporation",
+  "name": "Basket",
+  "url": "https://basket.com/",
+  "logo": "https://basket.com/wp-content/uploads/2017/11/android-chrome-256x256.png",
+  "founders": [
+    {
+      "@type": "Person",
+      "name": "Andy Ellwood"
+    },
+    {
+      "@type": "Person",
+      "name": "Neil Kataria"
+    }
+   ],
+  "knowsAbout": "grocery business intelligence, saving money, consumer packaged goods, crowdsourcing, app development, price comparison, grocery industry",
+  "sameAs": [
+    "https://www.facebook.com/basketsaving/",
+    "https://twitter.com/basketsavings",
+    "https://www.instagram.com/basketsavings/",
+    "https://www.linkedin.com/company/basket-savings/",
+    "https://itunes.apple.com/us/app/basket-grocery-shopping/id1060139875?mt=8",
+    "https://play.google.com/store/apps/details?id=com.basketsavings.basket&hl=en_US"
+  ]
+}
+</script>
+
+     <link rel="stylesheet" href="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
+     <link rel="stylesheet" href="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/animate.css">
+     <link rel="stylesheet" href="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/owl_002.css">
+     <link rel="stylesheet" href="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/owl.css">
+     <script src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/jquery-2.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+     
+
+
+    <title>Basket | Smart Grocery Shopping List App | Compare Grocery Prices</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v12.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Basket is a smart app that price checks shopping items between stores. Comparing prices to find the best deals and promotions, Basket is the ideal app.">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://basket.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Basket | Smart Grocery Shopping List App &amp; Insights">
+<meta property="og:description" content="Basket is a smart app that price checks shopping items between stores. Comparing prices to find the best deals and promotions, Basket is the ideal app.">
+<meta property="og:url" content="https://basket.com/">
+<meta property="og:site_name" content="Basket">
+<meta property="og:image" content="https://basket.com/wp-content/uploads/2019/01/basket-logo-blue.jpg">
+<meta property="og:image:secure_url" content="https://basket.com/wp-content/uploads/2019/01/basket-logo-blue.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Basket is a smart app that price checks shopping items between stores. Comparing prices to find the best deals and promotions, Basket is the ideal app.">
+<meta name="twitter:title" content="Basket | Smart Grocery Shopping List App &amp; Insights">
+<meta name="twitter:image" content="https://basket.com/wp-content/uploads/2019/01/basket-logo-blue.jpg">
+<meta name="msvalidate.01" content="577DB37A3035838C20B7202D9605E469">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://basket.com/#website","url":"https://basket.com/","name":"Basket","potentialAction":{"@type":"SearchAction","target":"https://basket.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://basket.com/#webpage","url":"https://basket.com/","inLanguage":"en-US","name":"Basket | Smart Grocery Shopping List App | Compare Grocery Prices","isPartOf":{"@id":"https://basket.com/#website"},"datePublished":"2017-11-10T14:08:25+00:00","dateModified":"2019-01-22T19:45:15+00:00","description":"Basket is a smart app that price checks shopping items between stores. Comparing prices to find the best deals and promotions, Basket is the ideal app."}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Basket » Feed" href="https://basket.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Basket » Comments Feed" href="https://basket.com/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/basket.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/styles.css" type="text/css" media="all">
+<script type="text/javascript" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/jquery-migrate.js" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://basket.com/wp-json/"><link rel="alternate" type="application/json" href="https://basket.com/wp-json/wp/v2/pages/11"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://basket.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://basket.com/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="https://basket.com/">
+<link rel="alternate" type="application/json+oembed" href="https://basket.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbasket.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://basket.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbasket.com%2F&amp;format=xml">
+<!-- Stream WordPress user activity plugin v3.4.2 -->
+<link rel="icon" href="https://3azxqf2nga8z4a15541txfu3-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/android-chrome-256x256-150x150.png" sizes="32x32">
+<link rel="icon" href="https://3azxqf2nga8z4a15541txfu3-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/android-chrome-256x256.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://3azxqf2nga8z4a15541txfu3-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/android-chrome-256x256.png">
+<meta name="msapplication-TileImage" content="https://basket.com/wp-content/uploads/2017/11/android-chrome-256x256.png">
+
+  </head>
+  <body class="home page-template page-template-home page-template-home-php page page-id-11">
+  <!-- Basket Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCJW447"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript)-->
+
+
+
+
+<main class="site-content">
+
+	<!-- defining svgs for this document -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+  <symbol id="hamburger" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M8 7h8c.552 0 1 .448 1 1s-.448 1-1 1H8c-.552 0-1-.448-1-1s.448-1 1-1zm0 4h8c.552 0 1 .448 1 1s-.448 1-1 1H8c-.552 0-1-.448-1-1s.448-1 1-1zm0 4h8c.552 0 1 .448 1 1s-.448 1-1 1H8c-.552 0-1-.448-1-1s.448-1 1-1z" fill="#fff"></path>
+    </g>
+  </symbol>
+
+  <symbol id="hamburger-x" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+      <path fill="#fff" d="M13.328 11.914l3.5 3.5-1.414 1.414-3.5-3.5-3.5 3.5L7 15.414l3.5-3.5-3.5-3.5L8.414 7l3.5 3.5 3.5-3.5 1.414 1.414z"></path>
+    </g>
+  </symbol>
+
+  <svg id="basket-insights" viewBox="0 0 109 37" width="109" height="37">
+    <defs>
+      <path id="a" d="M8.903.239H.064v7.396h8.839V.239z"></path>
+      <path id="c" d="M0 20.55h24V.73H0z"></path>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+      <g transform="translate(3.871 .498)">
+        <mask id="b" fill="#fff">
+          <use xlink:href="#a"></use>
+        </mask>
+        <path fill="#FFF" d="M2.37135484 2.65166518l1.09470968-1.02298661c.15135483-.14138839.39638709-.14138839.54735483 0 .15135484.14138839.15135484.37028572 0 .51167411l-1.09470967 1.022625c-.15135484.14138839-.3963871.14138839-.54735484 0-.15135484-.14138839-.15135484-.36992411 0-.5113125zm3.6716129-.14970536c.15135484.14102679.15135484.36992411 0 .5113125l-1.64245161 1.5339375c-.15096774.14138839-.396.14138839-.54735484 0-.15096774-.14102678-.15096774-.36992411 0-.5113125l1.64245161-1.5339375c.15096775-.14138839.3963871-.14138839.54735484 0zm.93445161 1.38423214c.15135484-.14138839.3963871-.14138839.54735484 0 .15135484.1413884.15135484.36992411 0 .5113125L5.88270968 5.93180357c-.15096774.14102679-.3963871.14102679-.54774194 0-.15096774-.14102678-.15096774-.37028571 0-.51167411l1.64245161-1.5339375zM4.62387097 6.98371875c.25548387-.07485268.52258064-.11318304.79548387-.11318304.75870968 0 1.44387097.293625 1.93548387.76479911V6.14732143l1.5483871-1.80803572v-.70007142l-2.56296775-2.3942009c-1.43612903-1.3415625-3.76490322-1.3415625-5.20103225 0-1.42180645 1.32890625-1.43341936 3.47395982-.03870968 4.81841518.36967742-.17574107.78425806-.27771428 1.22206452-.27771428.96038709 0 1.81974193.47153571 2.30129032 1.19800446z" mask="url(#b)"></path>
+      </g>
+      <path fill="#BEC6D5" d="M16.258 12.671l-1.549 7.879h6.968l1.549-7.879zM20.516 5.507l-1.548 1.791v2.507h3.097V7.298z"></path>
+      <path fill="#FFF" d="M13.548 3.716v1.433L12 6.94v2.865h.774V7.656h4.645v2.149h.775V6.94l1.548-1.791V3.716z"></path>
+      <mask id="d" fill="#fff">
+        <use xlink:href="#c"></use>
+      </mask>
+      <path fill="#FFF" mask="url(#d)" d="M13.548 9.805h3.097V8.372h-3.097zM12 19.1172992h.7741935v-2.1489795H12v2.1489795zm0-2.865306h.7741935v-2.1489795H12v2.1489795zm-1.5483871 0h.7741936v-2.1489795h-.7741936v2.1489795zm0 2.865306h.7741936v-2.1489795h-.7741936v2.1489795zm-1.54838709-2.865306h.77419354v-2.1489795h-.77419354v2.1489795zm0 2.865306h.77419354v-2.1489795h-.77419354v2.1489795zm-2.32258065 0h.77419355v-2.1489795h-.77419355v2.1489795zm0-2.865306h.77419355v-2.1489795h-.77419355v2.1489795zm-1.5483871 2.865306h.77419355v-2.1489795h-.77419355v2.1489795zm0-2.865306h.77419355v-2.1489795h-.77419355v2.1489795zm-1.54838709 2.865306h.77419355v-2.1489795h-.77419355v2.1489795zm0-2.865306h.77419355v-2.1489795h-.77419355v2.1489795zM15.483871 12.6703607l-1.5483871 7.8795915H2.32258065l-1.5483871-7.8795915H15.483871zM0 11.954h15.871v-1.433H0z"></path>
+      <path fill="#BEC6D5" mask="url(#d)" d="M16.645 11.954H24v-1.433h-7.355zM9.29032258 8.01423838c-.45445161 0-.86632258.15078673-1.19651613.39326325-.16490322-.83416221-.95109677-1.46775301-1.90025806-1.46775301s-1.73535484.6335908-1.90025807 1.46775301c-.33019355-.24247652-.74206451-.39326325-1.19651613-.39326325-.15329032 0-.3.0204153-.44283871.05157551-.71148387.15472652-1.26967742.67119793-1.43690322 1.32950199-.03367742.13216224-.05574194.26790611-.05574194.40973876H11.2258065c0-.9892469-.8663226-1.79081626-1.93548392-1.79081626"></path>
+      <path fill="#FFF" d="M106.6358549 20.5958987h-5.1840582v-8.30409312h-1.9475164V8.48288496c0-.07055619.0578022-.1273725.1295826-.1273725h1.8179338V4.9313088h5.1840582v3.42420366h2.222171v3.93629312h-2.222171v8.30409312zm-69.25840514-4.9921852c0 .0193101.00415571.0386202.01171154.0557022.22591946.4979783.74122738.8359053 1.44240884.8359053 1.0967294 0 1.7552204-.8893794 1.7552204-2.0754662 0-1.1868295-.658491-2.07583764-1.7552204-2.07583764-.64715724 0-1.21422263.33792706-1.44203105.83553394-.00793362.0178247-.01208933.0367635-.01208933.0564449v2.3677175zm-.12958257 4.935963h-4.95209404c-.07178043 0-.12958257-.0568163-.12958257-.1273725V3.14274633c0-.07018485.05780214-.12700116.12958257-.12700116h4.95209404c.07178043 0 .12958257.0568163.12958257.12700116v5.80046212c0 .11029048.13071594.16710678.2149635.09469384.63015661-.53956923 1.70535188-1.00821092 2.80208128-1.00821092 3.53839736 0 5.40355516 2.85789734 5.40355516 6.39016343 0 3.5315233-1.8651578 6.3894207-5.40355516 6.3894207-1.0967294 0-2.17192467-.4682704-2.80208128-1.0074683-.08424756-.0727843-.2149635-.015968-.2149635.0943225v.5161743c0 .0705562-.05780214.1273725-.12958257.1273725zm53.96309121-7.4120771h2.4658467c.0804696 0 .1446942-.0720416.1276936-.14965337-.14885-.69367882-.6252454-1.11738736-1.316982-1.11738736-.7102485 0-1.1620874.43819112-1.4000962 1.10030533-.0290899.0816967.0358902.1667354.1235379.1667354zm.1465832 2.5344529c-.1023816 0-.1624504.1095478-.110693.196072.4763954.7965423 1.3929182 1.0980772 2.6392531 1.0980772 1.2266897 0 2.2047925-.1708202 3.4303489-.7906007.0865143-.0438192.1904071.0155966.1904071.1110331v3.4420284c0 .0427051-.0204008.0828107-.056291.106577-.9418348.6257221-2.559539 1.0401469-4.4148742 1.0401469-4.1965106 0-6.9940584-2.3454365-6.9940584-6.3088381 0-3.85533915 2.688366-6.47037464 6.1991846-6.47037464 4.0865732 0 6.1712279 2.53408153 6.1712279 6.20077574v1.2477306c0 .0701849-.0581799.1273725-.1295825.1273725h-6.9249225zm-4.9645612 4.9338464h-5.3971327c-.0457128 0-.0880254-.023395-.1114485-.0620152l-2.7386123-4.5033422c-.0676247-.1110331-.2406533-.0638719-.2406533.0653574v4.3726275c0 .0705562-.05818.1273725-.1295826.1273725h-4.9524719c-.0714026 0-.1295825-.0568163-.1295825-.1273725V3.19859713c0-.07018485.0581799-.12700116.1295825-.12700116h4.9524719c.0714026 0 .1295826.0568163.1295826.12700116v9.03416405c0 .12700116.1688729.1756478.2387643.06832811l2.5206265-3.88690378c.0234231-.03639214.0649802-.05867305.1091818-.05867305h5.4953585c.1046484 0 .1662284.1158607.1061595.20015679L82.5070147 14.001865c-.0294678.0419624-.030979.0976646-.0034002.140741l3.9989255 6.2583347c.054402.0846675-.0075558.194958-.1095596.194958zM60.5994765 15.960208c0-.1028636.1163598-.1611653.2036297-.1043489 1.2115781.7835451 3.2063185 1.2889503 4.2947365 1.2889503.658491 0 .9875476-.1080624.9875476-.4315069 0-.2967074-.2198748-.4047697-.8504092-.5120894l-.740094-.1347995c-2.4140892-.4043984-4.0049702-1.5366397-4.0049702-3.77475656 0-2.74946361 2.249372-4.20552071 5.3483976-4.20552071 1.888203 0 3.2984996.33866974 4.596592 1.06762667.0411793.02265225.0661135.06647136.0661135.11251856v3.60467899c0 .09989273-.1106929.15856575-.1972072.10620565-1.2096892-.73452715-2.534227-1.17086153-3.8345861-1.17086153-.5209748 0-.8228304.10769104-.8228304.40439842 0 .26959894.2742768.37766133.6309122.45861528l.8228304.21575342c3.0722023.72821421 4.1417307 1.80623861 4.1417307 4.01687571 0 2.7230979-2.3861326 3.9634016-5.6230521 3.9634016-1.8069779 0-3.6929142-.3646642-4.9554942-1.0947351-.0404237-.023395-.0638468-.0657287-.0638468-.1114046V15.960208zm-6.5552533.5015431c-.312056-.4363344-.966769-.7029625-1.8016888-.5358557-.4457942.0891236-.7808955.5057765-.7060927.9473097.0846253.4994637.6407348.7274716 1.1960886.7274716.5991777 0 1.0634838-.2391484 1.3116929-.5856165.0034001-.0044561.0052891-.0100264.0052891-.0155966v-.5221159c0-.0055702-.001889-.0107691-.0052891-.0155966zm.0052891-3.0394867c0-.70110579-.7688062-1.32125763-2.5512276-1.32125763-1.0563057 0-2.3532647.26291467-3.3094556.76312097-.0170006.00854102-.0366458-.00334213-.0366458-.0222809l-.0003777-3.79555207c0-.06052979.0347568-.11548936.0910478-.13999835 1.1254415-.49277934 2.8111482-.87638224 4.6271931-.87638224 3.9214782 0 6.1988068 1.7252847 6.1988068 5.23044232v7.2542911c0 .0137399-.0117116.0248804-.0260677.0248804h-4.9675835c-.014356 0-.0256898-.0111405-.0256898-.0248804v-.5113467c0-.0215382-.0245565-.0334214-.0411793-.0189388-.4431497.3917726-1.56368.7712906-2.8391049.7712906-2.3865104 0-4.4711651-1.2941492-4.4711651-3.909556 0-2.3996534 2.0846547-3.8557105 4.7450641-3.8557105.9875476 0 2.1122336.2967074 2.6063852.6476316v-.2157534z"></path>
+      <path fill="#BEC6D5" d="M67.8707766 26.9457427v6.5353405H66.398853v-6.5353405h1.4719236zm.1766308-1.9723775c0 .500454-.4268578.8978734-.9125926.8978734-.4857348 0-.9125926-.3974194-.9125926-.8978734 0-.500454.4268578-.8978734.9125926-.8978734.4857348 0 .9125926.3974194.9125926.8978734zm1.1579131 8.507718v-6.5353405h1.4719236v.6182079c.3532616-.4121386 1.000908-.7654002 1.7663082-.7654002 1.4866428 0 2.31092.9861887 2.31092 2.4286738v4.253859h-1.4719236v-4.003632c0-.8095579-.3974193-1.3394504-1.2364157-1.3394504-.6329272 0-1.2069773.3974194-1.3688889 1.0450657v4.2980167h-1.4719236zm6.5009956-.5298924v-1.501362c.6182079.6034886 1.4424851.9567503 2.2078853.9567503.6182079 0 1.1333811-.2060693 1.1333811-.6918041 0-.4268578-.3532616-.6034887-.8684349-.7654002l-.7065233-.2207886c-1.0892234-.3385424-1.7663082-.8537156-1.7663082-1.9723775 0-1.1922581 1.0597849-1.9576583 2.4581123-1.9576583.7654002 0 1.4130466.2060693 1.9576583.5740502v1.4866427c-.5593309-.4857347-1.1922581-.8389964-1.9576583-.8389964-.5887694 0-1.0450657.2355078-1.0450657.6770848 0 .4268579.2796655.5740502.8389964.750681l.8537156.2649463c1.0892235.3385424 1.6632736.9273118 1.6632736 1.9282198 0 1.2658543-1.1186618 1.9870968-2.5758661 1.9870968-.8242772 0-1.6779929-.250227-2.1931661-.6770848zm7.2075188-6.0054481v6.5353405h-1.4719235v-6.5353405h1.4719235zm.1766309-1.9723775c0 .500454-.4268579.8978734-.9125926.8978734-.4857348 0-.9125926-.3974194-.9125926-.8978734 0-.500454.4268578-.8978734.9125926-.8978734.4857347 0 .9125926.3974194.9125926.8978734zm5.3676144 8.066141v-.2060693c-.2943847.3532616-.9125926.6770848-1.6485544.6770848-1.9282198 0-3.0174432-1.6043967-3.0174432-3.3559857 0-1.751589 1.0892234-3.3559856 3.0174432-3.3559856.7359618 0 1.3541697.3238232 1.6485544.6770848v-.5298925h1.4719235v5.9907288c0 2.3845162-1.8104659 3.1940741-3.3559856 3.1940741-.8684349 0-1.6485544-.2207885-2.1784469-.5593309v-1.560239c.6770849.6034887 1.3541697.8242772 2.1784469.8242772 1.0450657 0 1.8840621-.6182079 1.8840621-1.7957467zm0-1.6043967v-2.5611469c-.250227-.4415771-.7801195-.7801195-1.3983274-.7801195-1.1333811 0-1.7810274.8684349-1.7810274 2.0606929 0 1.1922581.6476463 2.060693 1.7810274 2.060693.6182079 0 1.1481004-.3385424 1.3983274-.7801195zm2.8064675 2.0459737v-9.567503h1.4719235v3.6503704c.3532617-.4121386 1.000908-.7654002 1.7663083-.7654002 1.4866427 0 2.3109199.9861887 2.3109199 2.4286738v4.253859h-1.4719235v-4.003632c0-.8095579-.3974194-1.3394504-1.2364158-1.3394504-.6329271 0-1.2069773.3974194-1.3688889 1.0450657v4.2980167h-1.4719235zm9.0474233-5.3136439v5.3136439h-1.4719236v-5.3136439h-1.3247312v-1.2216966h1.3247312v-1.751589h1.4719236v1.751589h1.4719235v1.2216966h-1.4719235zm1.9085941 4.7837515v-1.501362c.6182079.6034886 1.442485.9567503 2.2078853.9567503.6182079 0 1.1333811-.2060693 1.1333811-.6918041 0-.4268578-.3532616-.6034887-.8684349-.7654002l-.7065233-.2207886c-1.0892234-.3385424-1.7663082-.8537156-1.7663082-1.9723775 0-1.1922581 1.0597849-1.9576583 2.4581123-1.9576583.7654002 0 1.4130466.2060693 1.9576583.5740502v1.4866427c-.559331-.4857347-1.1922581-.8389964-1.9576583-.8389964-.5887694 0-1.0450657.2355078-1.0450657.6770848 0 .4268579.2796654.5740502.8389964.750681l.8537156.2649463c1.0892235.3385424 1.6632736.9273118 1.6632736 1.9282198 0 1.2658543-1.1186618 1.9870968-2.5758661 1.9870968-.8242772 0-1.6779929-.250227-2.1931661-.6770848z"></path>
+    </g>
+  </svg>
+
+
+
+
+  <!-- icons -->
+
+  <symbol id="icon-pindrop" viewBox="0 0 48 48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#8D6AFF" cx="24" cy="24" r="24"></circle>
+      <path d="M24 37c-6.667-6.985-10-12.318-10-16 0-5.523 4.477-10 10-10s10 4.477 10 10c0 3.682-3.333 9.015-10 16zm0-12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" fill="#FFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-pindrop-orange" viewBox="0 0 48 48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#FFAE11" cx="24" cy="24" r="24"></circle>
+      <path d="M24 37c-6.667-6.985-10-12.318-10-16 0-5.523 4.477-10 10-10s10 4.477 10 10c0 3.682-3.333 9.015-10 16zm0-12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" fill="#FFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-plan" viewBox="0 0 48 48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#FFAE11" cx="24" cy="24" r="24"></circle>
+      <path d="M17 12h14c1.1046 0 2 .8954 2 2v20c0 1.1046-.8954 2-2 2H17c-1.1046 0-2-.8954-2-2V14c0-1.1046.8954-2 2-2zm2 4v2h10v-1c0-.5523-.4477-1-1-1h-9zm0 4v2h8v-1c0-.5523-.4477-1-1-1h-7zm0 8v2h8v-1c0-.5523-.4477-1-1-1h-7zm0-4v2h10v-1c0-.5523-.4477-1-1-1h-9z" fill="#FFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-save" viewBox="0 0 48 48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#8D6AFF" cx="24" cy="24" r="24"></circle>
+      <path d="M24 36c-6.6274 0-12-5.3726-12-12s5.3726-12 12-12 12 5.3726 12 12-5.3726 12-12 12zm-6-11c0 3.3137 2.6863 6 6 6s6-2.6863 6-6H18zm4-3c0-1.1046-.8954-2-2-2s-2 .8954-2 2h4zm8 0c0-1.1046-.8954-2-2-2s-2 .8954-2 2h4z" fill="#FFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-shop" viewBox="0 0 48 48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#FFAE11" cx="24" cy="24" r="24"></circle>
+      <path d="M12 14h20c1.1046 0 2 .8954 2 2v14H12c-1.1046 0-2-.8954-2-2V16c0-1.1046.8954-2 2-2zm24 4c1.1046 0 2 .8954 2 2v14H16c-1.1046 0-2-.8954-2-2h22V18zm-14 8c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4z" fill="#FFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-shop-teal" viewBox="0 0 48 48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#1DE6D7" cx="24" cy="24" r="24"></circle>
+      <path d="M12 14h20c1.1046 0 2 .8954 2 2v14H12c-1.1046 0-2-.8954-2-2V16c0-1.1046.8954-2 2-2zm24 4c1.1046 0 2 .8954 2 2v14H16c-1.1046 0-2-.8954-2-2h22V18zm-14 8c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4z" fill="#FFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-barcode" width="48" height="48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#11D877" cx="24" cy="24" r="24"></circle>
+      <path fill="#FFF" d="M28.5 15H30v18h-1.5V15zM14 15h1v18h-1c-1.1045695 0-2-.8954305-2-2V17c0-1.1045695.8954305-2 2-2zm7 0h3v18h-3V15zm12 0h1c1.1045695 0 2 .8954305 2 2v14c0 1.1045695-.8954305 2-2 2h-1V15zm-16.5 0H18v18h-1.5V15zm9 0H27v18h-1.5V15z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-info" width="48" height="48">
+    <g fill="none" fill-rule="evenodd">
+      <circle cx="24" cy="24" r="24" fill="#3456FA"></circle>
+      <path fill="#fff" d="M24.2857143 21.1428571h1.4285714V34h-2.8571428V24H20v-2.8571429h4.2857143zm-.7142857-2.8571428c-1.1834673 0-2.1428572-.9593898-2.1428572-2.1428572 0-1.1834673.9593899-2.1428571 2.1428572-2.1428571 1.1834673 0 2.1428571.9593898 2.1428571 2.1428571 0 1.1834674-.9593898 2.1428572-2.1428571 2.1428572z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-community" width="48" height="48">
+    <circle cx="24" cy="24" r="24" fill="#1DE6D7"></circle>
+    <path fill="#FFF" d="M19.1734348 24.6451181c-1.7126953 0-3.1011092-1.4394222-3.1011092-3.2150394 0-1.7756172 1.3884139-3.2150393 3.1011092-3.2150393 1.7126953 0 3.1011092 1.4394221 3.1011092 3.2150393s-1.3884139 3.2150394-3.1011092 3.2150394zm8.915689-3.2150394c-1.7126953 0-3.1011092-1.4394221-3.1011092-3.2150393S26.3764285 15 28.0891238 15c1.7126954 0 3.1011092 1.4394222 3.1011092 3.2150394 0 1.7756172-1.3884138 3.2150393-3.1011092 3.2150393zM28.252 23c3.449 0 5.625 1.733 6.526 5.199.043.165.064.334.064.504 0 1.104-.895 2-2 2h-5.036c0-.17-.022-.339-.065-.504-.734-2.818-2.324-4.47-4.741-4.997C24.259 23.736 26.008 23 28.252 23zM14.0005253 33.9999896c-.2177429 0-.4340245-.0355578-.6403064-.1052695-1.0464207-.3536314-1.6080373-1.4885979-1.2544058-2.5350186l-.0000174-.0000059c1.1405391-3.3749363 3.4124835-5.0624045 6.8158333-5.0624045 3.4489129 0 5.6244875 1.7329532 6.526724 5.1988597a1.99998151 1.99998151 0 0 1 .0645041.5038388c0 1.1045591-.8954221 1.9999812-1.9999812 1.9999812l-9.5123506.0000188z"></path>
+  </symbol>
+
+  <symbol id="icon-flag" width="48" height="48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#1DE6D7" cx="24" cy="24" r="24"></circle>
+      <path fill="#FFF" d="M19.6666667 16.6666667H33l-4 6 4 6H19.6666667v6.6666666H17V14h2.6666667v2.6666667z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-graph" width="48" height="48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#1DE6D7" cx="24" cy="24" r="24"></circle>
+      <path fill="#FFF" d="M12 27h4v7h-4v-7zm6-4h4v11h-4V23zm6-4h4v15h-4V19zm6-4h4v19h-4V15z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-graph-bright" width="48" height="48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#11D877" cx="24" cy="24" r="24"></circle>
+      <path fill="#FFF" d="M12 27h4v7h-4v-7zm6-4h4v11h-4V23zm6-4h4v15h-4V19zm6-4h4v19h-4V15z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-tag" width="48" height="48">
+    <g fill="none" fill-rule="evenodd">
+      <circle fill="#3456FA" cx="24" cy="24" r="24"></circle>
+      <path fill="#FFF" d="M13 14h11.9111465l10.496933 10.496933c.7810486.7810486.7810486 2.0473785 0 2.8284271l-9.0827194 9.0827194c-.7810486.7810486-2.0473785.7810486-2.8284271 0L13 25.9111465V14zm8.4370621 10.918551c1.3704885 0 2.4814889-1.1110004 2.4814889-2.4814889 0-1.3704884-1.1110004-2.4814888-2.4814889-2.4814888-1.3704884 0-2.4814888 1.1110004-2.4814888 2.4814888 0 1.3704885 1.1110004 2.4814889 2.4814888 2.4814889z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-bullhorn" width="140" height="140">
+    <g fill="none" fill-rule="evenodd">
+      <circle cx="70" cy="70" r="70" fill="#3556FA"></circle>
+      <path fill="#FFF" d="M78.1875004 76.7434527v3.2598162c0 .8284272-.6715728 1.5-1.5 1.5H64.5c-.8284271 0-1.5-.6715728-1.5-1.5v-6.4683497l-5.6200975-1.1873099C55.9926527 72.0545368 55 70.8302649 55 69.4123956v-2.5468661c0-1.4109837.9832477-2.6312706 2.3619497-2.9313635L84.625 58v20.1034483l-6.4374996-1.3599956zm-3-.6337843L66 74.1687036v4.3345653h9.1875004v-2.3936005z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-shopping-cart" width="140" height="140">
+    <g fill="none" fill-rule="evenodd">
+      <circle cx="70" cy="70" r="70" fill="#3556FA"></circle>
+      <path fill="#FFF" d="M60.7980181 63.9614352H86l-3.7465577 14.9862309H61.6473747l-3.5872427-14.348971-1.5233623-5.7887768h-3.1318105C52.6290216 58.8099183 52 58.1808967 52 57.4049592 52 56.6290216 52.6290216 56 53.4049592 56h4.2148774c.638231 0 1.1962747.4301896 1.3587002 1.0474065l1.8194813 6.9140287zm4.5959144 24.3526253c-2.0691667 0-3.7465578-1.6773911-3.7465578-3.7465578 0-2.0691667 1.6773911-3.7465577 3.7465578-3.7465577 2.0691667 0 3.7465577 1.677391 3.7465577 3.7465577s-1.677391 3.7465578-3.7465577 3.7465578zm13.112952 0c-2.0691667 0-3.7465577-1.6773911-3.7465577-3.7465578 0-2.0691667 1.677391-3.7465577 3.7465577-3.7465577s3.7465578 1.677391 3.7465578 3.7465577-1.6773911 3.7465578-3.7465578 3.7465578z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-star" width="140" height="140">
+    <g fill="none" fill-rule="evenodd">
+      <circle cx="70" cy="70" r="70" fill="#3556FA"></circle>
+      <path fill="#FFF" d="M70 78.9985606l-7.3693456 5.3621628c-1.6364616 1.1907399-3.8352509-.4135053-3.2132361-2.3443895l2.8010689-8.6951951-7.355575-5.3811962c-1.6334036-1.1949665-.7935409-3.7906898 1.227347-3.793302l9.1005014-.0117633 2.8233502-8.687925c.6269627-1.9292697 3.3448157-1.9292697 3.9717784 0l2.8233502 8.687925 9.1005014.0117633c2.0208879.0026122 2.8607506 2.5983355 1.227347 3.793302l-7.355575 5.3811962 2.8010689 8.6951951c.6220148 1.9308842-1.5767745 3.5351294-3.2132361 2.3443895L70 78.9985606z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="icon-search" viewBox="0 0 15 15">
+    <g fill="#3556FA" fill-rule="nonzero">
+      <path d="M9.833 8.42l4.523 4.522-1.414 1.414-4.523-4.523A5.385 5.385 0 1 1 9.833 8.42zm-7.68-3.035a3.23 3.23 0 1 0 6.462 0 3.23 3.23 0 0 0-6.461 0z"></path>
+    </g>
+  </symbol>
+
+  <!-- social  -->
+
+  <symbol id="social-twitter" viewBox="0 0 24 24">
+    <g fill-rule="evenodd">
+      <circle cx="12" cy="12" r="12"></circle>
+      <path d="M19 9.1837c-.4783.201-.9924.3365-1.5318.3976.5506-.3125.9736-.8072 1.1727-1.3967-.5155.2893-1.0863.4994-1.6938.6126C16.4607 8.3065 15.7676 8 15.0004 8c-1.473 0-2.667 1.1303-2.667 2.5244 0 .198.0235.3906.069.5754-2.2167-.1053-4.182-1.1104-5.4974-2.6377-.2296.373-.361.8065-.361 1.2692 0 .876.4707 1.6486 1.1864 2.1013-.4372-.013-.8485-.1267-1.208-.3158-.0003.0105-.0003.021-.0003.0318 0 1.223.9194 2.2434 2.1396 2.4754-.2238.0576-.4595.0884-.7027.0884-.172 0-.339-.016-.502-.0453.3395 1.003 1.3245 1.733 2.4916 1.7533-.9128.677-2.0628 1.0807-3.3124 1.0807-.2153 0-.4276-.012-.6362-.0353C7.1803 17.582 8.5823 18 10.0884 18c4.9058 0 7.5885-3.8468 7.5885-7.183 0-.1093-.0027-.2182-.0078-.3265.521-.356.9732-.8005 1.3308-1.3068z" fill="#FFF" fill-rule="nonzero"></path>
+    </g>
+  </symbol>
+
+  <symbol id="social-facebook" viewBox="0 0 24 24">
+    <g fill-rule="evenodd">
+      <circle cx="12" cy="12" r="12"></circle>
+      <path d="M12.8945 18V12.526h1.769l.2648-2.1333h-2.0338V9.031c0-.6177.165-1.0386 1.018-1.0386L15 7.992V6.084C14.8118 6.058 14.1662 6 13.4152 6c-1.568 0-2.6416.994-2.6416 2.8198v1.5732H9v2.1332h1.7735V18h2.121z" fill="#FFF" fill-rule="nonzero"></path>
+    </g>
+  </symbol>
+
+  <symbol id="social-instagram" viewBox="0 0 24 24">
+    <g fill-rule="evenodd">
+      <circle cx="12" cy="12" r="12"></circle>
+      <path d="M12 6c1.6295 0 1.8338.007 2.4738.036.6386.0293 1.0748.1307 1.4564.279.3946.1533.7292.3585 1.0628.692.3336.3336.5387.6683.692 1.0628.1484.3817.2498.8178.279 1.4565.029.64.036.8442.036 2.4737 0 1.6296-.007 1.8338-.036 2.4738-.0292.6387-.1306 1.0748-.279 1.4565-.1533.3945-.3585.729-.692 1.0627-.3336.3336-.6682.5387-1.0628.692-.3816.1484-.8178.2498-1.4564.279-.64.029-.8443.036-2.4738.036-1.6295 0-1.8338-.007-2.4738-.036-.6386-.0292-1.0748-.1306-1.4564-.279-.3946-.1533-.7292-.3584-1.0627-.692-.3335-.3336-.5387-.6682-.692-1.0627-.1484-.3817-.2498-.8178-.279-1.4565C6.007 13.8338 6 13.6296 6 12c0-1.6295.007-1.8338.036-2.4737.0292-.6387.1306-1.0748.279-1.4565.1533-.3946.3585-.7292.692-1.0628.3336-.3335.6682-.5387 1.0628-.692.3816-.1483.8178-.2497 1.4564-.279C10.1662 6.007 10.3705 6 12 6zm0 1.081c-1.602 0-1.7918.0062-2.4245.035-.585.0267-.9027.1245-1.1142.2067-.28.1088-.48.2388-.69.4488-.2098.21-.3398.4098-.4487.69-.082.2113-.18.529-.2066 1.114-.0288.6327-.035.8224-.035 2.4245 0 1.602.0062 1.792.035 2.4246.0267.585.1245.9027.2066 1.114.109.28.239.48.4488.69.21.21.41.34.69.4488.2114.0822.529.18 1.114.2066.6327.029.8224.035 2.4246.035 1.6022 0 1.792-.006 2.4245-.035.585-.0267.9027-.1244 1.114-.2066.2802-.1088.48-.239.69-.4488.21-.21.34-.41.449-.69.082-.2113.1798-.529.2064-1.114.0288-.6327.035-.8225.035-2.4246 0-1.602-.0062-1.7918-.035-2.4245-.0267-.585-.1245-.9027-.2066-1.114-.1088-.2802-.239-.48-.449-.69-.2098-.21-.4097-.34-.6898-.4488-.2114-.0822-.529-.18-1.114-.2067-.6328-.0288-.8225-.035-2.4246-.035zm0 1.838c1.7016 0 3.081 1.3794 3.081 3.081S13.7017 15.081 12 15.081 8.919 13.7017 8.919 12 10.2983 8.919 12 8.919zM12 14c1.1046 0 2-.8954 2-2s-.8954-2-2-2-2 .8954-2 2 .8954 2 2 2zm3.9228-5.2028c0 .3976-.3223.72-.72.72-.3976 0-.72-.3224-.72-.72 0-.3977.3224-.72.72-.72.3977 0 .72.3223.72.72z" fill="#FFF" fill-rule="nonzero"></path>
+    </g>
+  </symbol>
+
+  <symbol id="share-twitter" viewBox="0 0 38 38">
+    <g transform="translate(1 1)" fill-rule="evenodd">
+      <circle fill="none" cx="18" cy="18" r="18"></circle>
+      <path d="M28.5 13.776c-.717.3-1.49.504-2.298.596.826-.47 1.46-1.21 1.76-2.095-.774.434-1.63.75-2.54.92C24.69 12.46 23.65 12 22.5 12c-2.21 0-4.002 1.695-4.002 3.787 0 .296.035.586.103.863-3.324-.158-6.272-1.666-8.246-3.957-.344.56-.54 1.21-.54 1.904 0 1.314.705 2.473 1.78 3.152-.657-.02-1.274-.19-1.813-.475v.048c0 1.834 1.378 3.365 3.208 3.713-.335.086-.69.133-1.054.133-.257 0-.508-.025-.752-.07.51 1.505 1.986 2.6 3.737 2.63-1.37 1.016-3.094 1.62-4.97 1.62-.322 0-.64-.016-.953-.052C10.77 26.373 12.873 27 15.133 27c7.358 0 11.382-5.77 11.382-10.774 0-.165-.004-.328-.01-.49.78-.534 1.46-1.2 1.995-1.96z" fill-rule="nonzero" stroke="none"></path>
+    </g>
+  </symbol>
+
+  <symbol id="share-facebook" viewBox="0 0 38 38">
+    <g transform="translate(1 1)" fill-rule="evenodd">
+      <circle fill="none" cx="18" cy="18" r="18"></circle>
+      <path d="M18.842 27v-8.21h2.653l.397-3.2h-3.05v-2.044c0-.926.247-1.557 1.527-1.557l1.63-.002V9.126C21.718 9.086 20.75 9 19.623 9c-2.352 0-3.963 1.49-3.963 4.23v2.36H13v3.2h2.66V27h3.182z" fill-rule="nonzero" stroke="none"></path>
+    </g>
+  </symbol>
+
+  <symbol id="share-linkedin" viewBox="0 0 38 38">
+    <g transform="translate(1 1)" fill-rule="evenodd">
+      <circle fill="none" cx="18" cy="18" r="18"></circle>
+      <path d="M11 12.663c0-.482.17-.88.507-1.193.338-.313.777-.47 1.317-.47.53 0 .96.154 1.29.463.337.318.506.733.506 1.244 0 .462-.164.848-.493 1.157-.337.318-.78.477-1.332.477h-.014c-.53 0-.96-.158-1.288-.476-.328-.32-.492-.72-.492-1.2zm.188 12.655v-9.66h3.215v9.66h-3.215zm4.995 0c.02-2.912.03-5.173.03-6.783 0-1.61-.01-2.57-.03-2.878h3.215v1.374l-.015.03h.015v-.03c.695-1.07 1.665-1.604 2.91-1.604 1.11 0 2.003.368 2.678 1.106.676.738 1.014 1.82 1.014 3.247v5.538h-3.214v-5.163c0-1.456-.54-2.184-1.622-2.184-.415 0-.76.114-1.035.34-.276.228-.48.505-.616.833-.078.183-.116.443-.116.78v5.395h-3.215z" stroke="none"></path>
+    </g>
+  </symbol>
+
+  <!-- logos -->
+
+  <symbol id="logo" viewBox="0 0 108 21">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M36.9688 15.454c0 .0195.004.039.0116.0562.2243.503.7358.8442 1.4318.8442 1.0886 0 1.7422-.8982 1.7422-2.096 0-1.1984-.6536-2.0962-1.7422-2.0962-.6424 0-1.2053.3413-1.4314.8438-.008.018-.012.037-.012.057v2.391zm-.1286 4.9845h-4.9155c-.0713 0-.1286-.0574-.1286-.1287V2.8706c0-.071.0574-.1283.1287-.1283h4.9155c.0712 0 .1286.0574.1286.1283V8.728c0 .1113.1298.1687.2134.0956.6255-.545 1.6927-1.018 2.7814-1.018 3.5122 0 5.3636 2.886 5.3636 6.453 0 3.566-1.8514 6.452-5.3636 6.452-1.0887 0-2.156-.4727-2.7814-1.0173-.0836-.0735-.2134-.016-.2134.0953v.5213c0 .071-.0574.1285-.1286.1285zm16.6722-4.118c-.3097-.4407-.9596-.71-1.7884-.5412-.4424.09-.775.5108-.7008.9566.084.5043.636.7346 1.1872.7346.5948 0 1.0556-.2415 1.302-.5914.0034-.0045.0053-.01.0053-.0158v-.5272c0-.0056-.002-.011-.0053-.0158zm.0053-3.0694c0-.708-.763-1.3342-2.5324-1.3342-1.0485 0-2.336.2655-3.285.7706-.017.0087-.0364-.0033-.0364-.0225l-.0005-3.833c0-.061.0346-.1166.0904-.1413 1.117-.4976 2.7903-.885 4.593-.885 3.8924 0 6.153 1.7423 6.153 5.282v7.3255c0 .014-.0117.025-.026.025h-4.9308c-.0143 0-.0255-.011-.0255-.025v-.5164c0-.0217-.0244-.0337-.041-.019-.4398.3955-1.552.7788-2.818.7788-2.369 0-4.4382-1.307-4.4382-3.948 0-2.4233 2.0693-3.8937 4.71-3.8937.9803 0 2.0967.2996 2.5872.654v-.218zm6.5015 2.563c0-.104.1155-.1628.2022-.1054 1.2026.7912 3.1826 1.3016 4.263 1.3016.6536 0 .9802-.109.9802-.4357 0-.2996-.2182-.4088-.844-.5172l-.7347-.136c-2.3964-.4085-3.9755-1.5518-3.9755-3.812 0-2.7764 2.2327-4.2468 5.309-4.2468 1.874 0 3.274.342 4.5625 1.078.041.023.0656.0672.0656.1137v3.6402c0 .1008-.11.16-.1957.1072-1.201-.7417-2.5156-1.1824-3.8064-1.1824-.517 0-.8167.1088-.8167.4084 0 .2722.272.3814.626.463l.817.218c3.0494.7354 4.111 1.824 4.111 4.0564 0 2.7498-2.3685 4.0023-5.5815 4.0023-1.7936 0-3.6656-.3682-4.919-1.1054-.04-.0238-.0633-.0665-.0633-.1126V15.814zm25.603 4.6812h-5.3573c-.0455 0-.0875-.0236-.1107-.0626L77.436 15.885c-.0672-.112-.239-.0645-.239.066v4.4156c0 .0713-.0577.1287-.1286.1287h-4.916c-.0708 0-.1285-.0574-.1285-.1287V2.927c0-.071.0576-.1284.1285-.1284h4.916c.0708 0 .1285.0574.1285.1283v9.123c0 .128.1676.1772.237.069l2.502-3.9253c.0233-.0367.0645-.0592.1084-.0592h5.4547c.104 0 .165.117.1055.202l-3.8396 5.5c-.0294.0423-.031.0985-.0035.142l3.9694 6.32c.054.0854-.0076.1967-.109.1967zm4.7823-7.5417h2.4476c.08 0 .1438-.0727.127-.151-.148-.7006-.6207-1.1285-1.3074-1.1285-.705 0-1.1535.4425-1.3897 1.111-.029.0826.0355.1685.1225.1685zm.1455 2.5594c-.1016 0-.1612.1105-.11.198.473.8043 1.3828 1.1088 2.62 1.1088 1.2175 0 2.1884-.1725 3.405-.7984.0858-.0443.189.0157.189.112v3.476c0 .043-.0204.0836-.056.1076-.935.632-2.5406 1.0504-4.3822 1.0504-4.1655 0-6.9424-2.3685-6.9424-6.371 0-3.893 2.6685-6.534 6.1534-6.534 4.0563 0 6.1256 2.559 6.1256 6.262v1.26c0 .0707-.0578.1285-.1286.1285H90.55zm15.1654 4.9822h-5.1457v-8.3857h-1.933l-.0002-3.8464c0-.071.0574-.1285.1287-.1285h1.8045v-3.458h5.1457v3.458h2.2058v3.975h-2.2058v8.3857zM13.5484 9.7818V8.3532h3.0968v1.4286h-3.0968zm0-6.0715h6.1935V5.139l-1.5485 1.7856v2.8572h-.774v-2.143H12.774v2.143H12V6.9245l1.5484-1.7857V3.7102zM12 19.0675h.7742v-2.143H12v2.143zm0-2.8572h.7742v-2.1428H12v2.1428zm-1.5484 0h.7742v-2.1428h-.7742v2.1428zm0 2.8572h.7742v-2.143h-.7742v2.143zm-1.5484-2.8572h.7742v-2.1428h-.7742v2.1428zm0 2.8572h.7742v-2.143h-.7742v2.143zm-2.3226 0h.7742v-2.143h-.7742v2.143zm0-2.8572h.7742v-2.1428h-.7742v2.1428zm-1.5483 2.8572h.7742v-2.143h-.7742v2.143zm0-2.8572h.7742v-2.1428h-.7742v2.1428zM3.484 19.0675h.774v-2.143h-.774v2.143zm0-2.8572h.774v-2.1428h-.774v2.1428zm12-3.5714l-1.5485 7.857H2.3225L.7743 12.639H15.484zM0 11.9245V10.496h15.871v1.4286H0zM6.2423 3.115L7.337 2.1046c.1514-.1396.3964-.1396.5474 0 .1513.1396.1513.3657 0 .5054L6.7897 3.62c-.1514.1396-.3964.1396-.5474 0-.1513-.1397-.1513-.3654 0-.505zm3.6716-.148c.1513.1394.1513.3655 0 .505L8.2714 4.987c-.151.1397-.396.1397-.5474 0-.1508-.1392-.1508-.3653 0-.505l1.6426-1.515c.151-.1395.3964-.1395.5473 0zm.9344 1.3672c.1513-.1396.3964-.1396.5473 0 .1514.1397.1514.3654 0 .505l-1.642 1.5154c-.151.1393-.3964.1393-.5478 0-.151-.1393-.151-.3657 0-.5054l1.6424-1.515zM8.4948 7.3935c.2555-.074.5226-.1118.7955-.1118.7587 0 1.444.29 1.9355.7554V6.5676l1.5484-1.7858v-.6914l-2.563-2.3646c-1.436-1.325-3.765-1.325-5.201 0-1.4218 1.3125-1.4334 3.431-.0387 4.759.3697-.1737.7842-.2744 1.222-.2744.9604 0 1.8198.4657 2.3013 1.1832z" fill="#FFF"></path>
+      <path d="M9.2903 7.996c1.0692 0 1.9355.7993 1.9355 1.7858H1.1613c0-.1415.022-.2768.0557-.4086.1673-.6565.7255-1.1715 1.437-1.3257.1428-.031.2895-.0515.4428-.0515.4544 0 .8663.1504 1.1965.3922.165-.8318.951-1.4636 1.9002-1.4636.9492 0 1.7354.6318 1.9003 1.4636.3302-.2418.742-.3922 1.1965-.3922zm7.355 3.9286V10.496H24v1.4286h-7.3548zM20.516 5.496l1.5485 1.7857v2.5h-3.0968v-2.5L20.516 5.496zm-4.2578 7.143h6.9677l-1.549 7.8572h-6.9676l1.5488-7.8572z" fill="#99AFFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="logo-blog" viewBox="0 0 158 26">
+    <defs>
+      <path id="a" d="M8.903.236H.063V7.54h8.84V.237z"></path>
+      <path id="c" d="M0 20h24V.236H0z"></path>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+      <path d="M117.976 19.044V20.5h-2.128V2.3h2.128v7.224c.616-.896 1.96-1.708 3.5-1.708 3.64 0 5.6 2.968 5.6 6.468 0 3.528-1.96 6.468-5.6 6.468-1.54 0-2.884-.812-3.5-1.708zm0-7.28v5.04c.644 1.288 1.876 2.044 3.192 2.044 2.38 0 3.78-1.932 3.78-4.564s-1.4-4.564-3.78-4.564c-1.316 0-2.548.756-3.192 2.044zM131.532 2.3h-2.1v18.2h2.1V2.3zm13.78 11.984c0 3.808-2.324 6.468-5.712 6.468-3.416 0-5.712-2.66-5.712-6.468s2.296-6.468 5.712-6.468c3.388 0 5.712 2.66 5.712 6.468zm-2.128 0c0-2.716-1.344-4.62-3.584-4.62s-3.584 1.904-3.584 4.62 1.344 4.62 3.584 4.62 3.584-1.904 3.584-4.62zm12.604 5.376v-.812c-.616.868-1.932 1.68-3.472 1.68-3.64 0-5.544-3.024-5.544-6.356s1.904-6.356 5.544-6.356c1.54 0 2.856.784 3.472 1.652v-1.4h2.128V19.52c0 4.34-3.108 6.02-6.076 6.02-1.596 0-3.052-.448-4.004-1.12v-2.324c1.232 1.148 2.548 1.54 4.004 1.54 2.212 0 3.948-1.316 3.948-3.976zm0-2.968v-5.068c-.644-1.176-1.82-1.932-3.164-1.932-2.352 0-3.724 1.876-3.724 4.48 0 2.576 1.372 4.452 3.724 4.452 1.344 0 2.52-.756 3.164-1.932z" fill="#FFFFFF"></path>
+      <g fill="#FFFFFF">
+        <path d="M36.97 15.454c0 .02.003.04.01.056.225.503.736.844 1.432.844 1.09 0 1.742-.898 1.742-2.096s-.653-2.096-1.742-2.096c-.642 0-1.205.34-1.43.844-.01.018-.013.037-.013.057v2.39zm-.13 4.984h-4.915c-.072 0-.13-.057-.13-.128V2.87c0-.07.058-.128.13-.128h4.915c.07 0 .13.058.13.128v5.858c0 .11.13.17.212.096.626-.545 1.693-1.02 2.782-1.02 3.512 0 5.363 2.887 5.363 6.454 0 3.567-1.85 6.453-5.363 6.453-1.09 0-2.156-.472-2.782-1.017-.083-.073-.213-.016-.213.096v.52c0 .07-.06.128-.13.128zM53.512 16.32c-.31-.44-.96-.71-1.788-.54-.442.09-.775.51-.7.956.083.504.635.735 1.186.735.595 0 1.056-.24 1.302-.59.004-.005.006-.01.006-.017v-.527c0-.005-.002-.01-.006-.016zm.006-3.07c0-.707-.763-1.333-2.533-1.333-1.048 0-2.336.265-3.285.77-.017.01-.036-.003-.036-.022V8.832c0-.06.034-.117.09-.14 1.117-.5 2.79-.886 4.593-.886 3.892 0 6.153 1.742 6.153 5.282v7.325c0 .014-.012.025-.026.025h-4.93c-.015 0-.026-.01-.026-.025v-.516c0-.022-.025-.034-.04-.02-.44.396-1.553.78-2.82.78-2.368 0-4.437-1.307-4.437-3.948 0-2.425 2.07-3.895 4.71-3.895.98 0 2.097.3 2.588.654v-.22zM60.02 15.814c0-.104.115-.163.2-.105 1.204.79 3.184 1.3 4.264 1.3.654 0 .98-.11.98-.436 0-.3-.218-.408-.844-.517l-.734-.136c-2.396-.407-3.976-1.55-3.976-3.81 0-2.777 2.233-4.248 5.31-4.248 1.874 0 3.273.342 4.562 1.08.04.02.066.066.066.112v3.64c0 .1-.11.16-.196.108-1.2-.742-2.516-1.183-3.806-1.183-.518 0-.817.108-.817.408 0 .272.27.38.625.463l.817.22c3.05.734 4.11 1.823 4.11 4.055 0 2.75-2.368 4.002-5.58 4.002-1.794 0-3.666-.368-4.92-1.105-.04-.024-.063-.067-.063-.113v-3.736zM85.622 20.495h-5.357c-.045 0-.087-.023-.11-.062l-2.72-4.548c-.066-.112-.238-.064-.238.066v4.417c0 .07-.058.128-.13.128h-4.914c-.07 0-.13-.057-.13-.128V2.927c0-.07.06-.128.13-.128h4.915c.07 0 .13.056.13.127v9.123c0 .128.167.177.236.07l2.502-3.926c.023-.037.065-.06.108-.06H85.5c.103 0 .164.118.105.203l-3.84 5.5c-.03.042-.03.098-.003.142l3.97 6.318c.053.086-.01.197-.11.197"></path>
+        <path d="M90.405 12.954h2.447c.08 0 .144-.073.127-.152-.15-.7-.622-1.128-1.308-1.128-.705 0-1.154.443-1.39 1.11-.03.084.036.17.123.17zm.145 2.56c-.102 0-.16.11-.11.197.473.805 1.383 1.11 2.62 1.11 1.218 0 2.188-.173 3.405-.8.086-.043.19.017.19.114v3.475c0 .043-.02.083-.057.107-.935.632-2.54 1.05-4.382 1.05-4.166 0-6.943-2.368-6.943-6.37 0-3.894 2.67-6.534 6.154-6.534 4.056 0 6.125 2.56 6.125 6.26v1.26c0 .072-.057.13-.128.13H90.55zM105.715 20.495h-5.145V12.11h-1.933V8.263c0-.07.057-.128.128-.128h1.805V4.677h5.145v3.458h2.206v3.975h-2.205v8.385z"></path>
+      </g>
+      <path fill="#99AFFF" d="M16.258 12.64l-1.55 7.856h6.97l1.548-7.857"></path>
+      <g transform="translate(0 .496)">
+        <g transform="translate(3.87)">
+          <mask id="b" fill="white">
+            <use xlink:href="#a"></use>
+          </mask>
+          <path d="M2.37 2.62l1.096-1.01c.15-.14.396-.14.547 0 .152.138.152.364 0 .504L2.92 3.124c-.153.14-.398.14-.55 0-.15-.14-.15-.365 0-.505zm3.673-.15c.15.14.15.366 0 .506L4.4 4.49c-.15.14-.395.14-.547 0-.15-.138-.15-.364 0-.504L5.496 2.47c.15-.14.396-.14.547 0zm.934 1.368c.152-.14.397-.14.548 0 .15.14.15.366 0 .505L5.883 5.86c-.15.138-.397.138-.548 0-.15-.14-.15-.367 0-.507l1.642-1.515zm-2.353 3.06c.255-.074.522-.112.795-.112.758 0 1.443.29 1.935.755V6.07l1.548-1.784v-.692L6.34 1.23c-1.436-1.325-3.765-1.325-5.2 0C-.284 2.542-.295 4.66 1.1 5.99c.37-.175.785-.276 1.223-.276.96 0 1.82.466 2.3 1.183z" fill="#FFFFFF" mask="url(#b)"></path>
+        </g>
+        <path fill="#99AFFF" d="M20.516 5l-1.548 1.786v2.5h3.097v-2.5"></path>
+        <path fill="#FFFFFF" d="M13.548 3.214v1.43L12 6.428v2.856h.774V7.143h4.645v2.143h.774V6.43l1.548-1.787v-1.43"></path>
+        <mask id="d" fill="white">
+          <use xlink:href="#c"></use>
+        </mask>
+        <path fill="#FFFFFF" mask="url(#d)" d="M13.548 9.286h3.097v-1.43h-3.097M12 18.57h.774v-2.14H12v2.14zm0-2.856h.774V13.57H12v2.144zm-1.548 0h.774V13.57h-.774v2.144zm0 2.857h.774v-2.14h-.774v2.14zm-1.55-2.856h.775V13.57h-.774v2.144zm0 2.857h.775v-2.14h-.774v2.14zm-2.32 0h.773v-2.14H6.58v2.14zm0-2.856h.773V13.57H6.58v2.144zM5.03 18.57h.774v-2.14h-.774v2.14zm0-2.856h.774V13.57h-.774v2.144zM3.484 18.57h.774v-2.14h-.774v2.14zm0-2.856h.774V13.57h-.774v2.144zm12-3.57L13.934 20H2.325l-1.55-7.857h14.71zM0 11.43h15.87V10H0"></path>
+        <path fill="#99AFFF" mask="url(#d)" d="M16.645 11.43H24V10h-7.355M9.29 7.5c-.454 0-.866.15-1.196.392-.165-.832-.95-1.463-1.9-1.463s-1.736.63-1.9 1.462C3.963 7.65 3.55 7.5 3.096 7.5c-.154 0-.3.02-.443.05-.712.156-1.27.67-1.437 1.327-.034.132-.056.267-.056.41h10.066c0-.988-.867-1.787-1.936-1.787"></path>
+      </g>
+    </g>
+  </symbol>
+
+
+  <symbol id="logo-small" viewBox="0 0 62 56">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M35 26.339v-4h8v4h-8zm0-17h16v4l-4 5v8h-2v-6H33v6h-2v-8l4-5v-4zm-4 43h2v-6h-2v6zm0-8h2v-6h-2v6zm-4 0h2v-6h-2v6zm0 8h2v-6h-2v6zm-4-8h2v-6h-2v6zm0 8h2v-6h-2v6zm-6 0h2v-6h-2v6zm0-8h2v-6h-2v6zm-4 8h2v-6h-2v6zm0-8h2v-6h-2v6zm-4 8h2v-6H9v6zm0-8h2v-6H9v6zm31-10l-4 22H6l-4-22h38zm-40-2v-4h41v4H0zM16.126 7.672l2.828-2.829c.391-.391 1.024-.391 1.414 0 .391.391.391 1.024 0 1.415L17.54 9.086c-.391.391-1.024.391-1.414 0-.391-.391-.391-1.023 0-1.414zm9.485-.414c.391.39.391 1.023 0 1.414l-4.243 4.242c-.39.391-1.023.391-1.414 0-.39-.39-.39-1.023 0-1.414l4.243-4.242c.39-.391 1.024-.391 1.414 0zm2.414 3.828c.391-.391 1.024-.391 1.414 0 .391.391.391 1.023 0 1.414l-4.242 4.243c-.39.39-1.024.39-1.415 0-.39-.39-.39-1.024 0-1.415l4.243-4.242zm-6.08 8.566c.66-.207 1.35-.313 2.055-.313 1.96 0 3.73.812 5 2.115v-4.115l4-5v-1.936l-6.621-6.621c-3.71-3.71-9.726-3.71-13.436 0-3.673 3.675-3.703 9.607-.1 13.325.955-.486 2.026-.768 3.157-.768 2.481 0 4.701 1.304 5.945 3.313z" fill="#FFF"></path>
+      <path d="M24 21.339c2.762 0 5 2.238 5 5H3c0-.396.057-.775.144-1.144.432-1.838 1.874-3.28 3.712-3.712.369-.087.748-.144 1.144-.144 1.174 0 2.238.421 3.091 1.098.426-2.329 2.457-4.098 4.909-4.098s4.483 1.769 4.909 4.098c.853-.677 1.917-1.098 3.091-1.098zm19 11v-4h19v4H43zm10-18l4 5v7h-8v-7l4-5zM42.0003 34.3392h18l-4.001 22h-18l4.001-22z" fill="#99AFFF"></path>
+    </g>
+  </symbol>
+
+  <!-- Badges -->
+
+  <symbol id="badge-google" viewBox="0 0 140 50">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M116.93 34.21l-1.74 3.97h1.83l4.85-11.06h-1.83l-2.195 5.004-2.195-5.004h-1.83l3.11 7.09zm-22.838-3.763V23.29h4.053c1.964 0 3.57 1.61 3.57 3.58 0 1.967-1.606 3.577-3.57 3.577h-2.377v4.076h-1.675v-4.076zm-39.755-2.153s.1.39.1 1.07c0 3.215-2.32 5.39-5.488 5.39-3.603 0-6.05-2.935-6.05-5.944 0-3.07 2.6-5.914 5.963-5.914 2.64 0 4.088 1.615 4.088 1.615l-1.127 1.17s-1.076-1.165-2.902-1.165c-2.366 0-4.254 1.88-4.254 4.324 0 2.507 1.98 4.296 4.25 4.296 1.773 0 3.653-.965 3.843-3.23h-3.85v-1.612h5.427zm4.615-1.17c1.83 0 3.816 1.3 3.816 3.825 0 2.2-1.707 3.797-3.79 3.797-2.302 0-3.85-1.778-3.85-3.843 0-2.035 1.596-3.78 3.824-3.78zm.022 1.498c-1.23 0-2.177.985-2.177 2.306 0 1.348.958 2.323 2.172 2.323 1.103 0 2.137-.912 2.137-2.31 0-1.43-1.038-2.318-2.133-2.318zm8.384-1.497c1.83 0 3.816 1.3 3.816 3.824 0 2.2-1.707 3.797-3.79 3.797-2.302 0-3.85-1.778-3.85-3.843 0-2.035 1.596-3.78 3.824-3.78zm.022 1.497c-1.23 0-2.177.985-2.177 2.306 0 1.348.958 2.323 2.172 2.323 1.105 0 2.138-.912 2.138-2.31 0-1.43-1.038-2.318-2.133-2.318zm8.21-1.493c.89 0 1.562.344 2.052.873v-.645h1.595v6.848c0 2.69-1.55 3.973-3.582 3.973-1.858 0-2.902-1.147-3.42-2.245l1.46-.613c.203.49.786 1.357 1.948 1.357 1.203 0 2-.788 2-2.103v-.752c-.426.495-1.003.926-2.087.926-1.753 0-3.616-1.52-3.616-3.813 0-2.014 1.607-3.808 3.65-3.808zm.15 1.493c-1.073 0-2.127.873-2.127 2.336 0 1.407 1.015 2.294 2.104 2.294 1.027 0 2.054-.82 2.054-2.31 0-1.464-1.028-2.32-2.03-2.32zm10.923-1.503c1.52 0 2.67 1.016 3.163 2.233l.264.62-5.1 2.122c.305.568.797 1.154 1.866 1.155.952 0 1.522-.52 1.863-1.05l1.314.877c-.59.79-1.577 1.672-3.186 1.672-1.928 0-3.733-1.424-3.733-3.825 0-2.268 1.62-3.805 3.548-3.805zm.066 1.465c-1.102 0-2.146 1.136-2 2.24l3.407-1.426c-.213-.445-.713-.815-1.408-.815zm-6.214 5.938V23.29h1.675v11.233h-1.674zm22.46 0V23.29h1.675v11.233h-1.674zm-7.208-9.554v3.8h2.377c1.04 0 1.896-.86 1.896-1.9 0-1.043-.856-1.9-1.895-1.9h-2.377zm15.74 9.553v-.906c-.387.46-.858.816-1.456.98-1.063.29-2.357.175-3.145-.674-.506-.546-.668-1.44-.573-2.166.175-1.343 1.28-2.163 2.567-2.294.827-.084 1.73.077 2.567.3-.183-1.832-2.966-2.225-3.94-.516l-1.35-.907c1.995-3.003 7.268-2.023 7.005 2.143v4.04h-1.675zm0-3.247c-.47-.152-.9-.275-1.395-.334-2.88-.434-2.397 2.72-.46 2.19.917-.25 1.64-.922 1.854-1.856zm-63.064-15.82s.045.178.045.487c0 1.463-1.057 2.453-2.498 2.453-1.64 0-2.753-1.335-2.753-2.705 0-1.396 1.183-2.69 2.713-2.69 1.2 0 1.86.735 1.86.735l-.513.532s-.49-.53-1.32-.53c-1.078 0-1.937.856-1.937 1.967 0 1.142.9 1.956 1.934 1.956.807 0 1.662-.44 1.75-1.47h-1.753v-.734h2.47zM58.54 18.29v-5.11h.763v5.11h-.762zm-4.27 0v-4.347h-1.25v-.764h3.265v.763h-1.25v4.348h-.764zm-4.978 0v-5.11h2.924v.763h-2.16v1.41h1.9v.764h-1.9v1.41h2.16v.764h-2.924zm11.883 0v-4.347h-1.25v-.764h3.264v.763h-1.253v4.348h-.762zm6.69-5.29c1.53 0 2.712 1.294 2.712 2.69 0 1.36-1.095 2.684-2.713 2.705-1.618-.02-2.714-1.345-2.714-2.704 0-1.396 1.184-2.69 2.714-2.69zm0 4.66c1.022-.013 1.91-.823 1.91-1.956 0-1.102-.846-1.953-1.91-1.967-1.066.014-1.91.865-1.91 1.967 0 1.133.886 1.943 1.91 1.956zm3.474.63v-5.11h.76l2.45 3.72v-3.72h.76v5.11h-.76L72.1 14.57v3.723h-.76zm-51.917-.914l8.613 8.617-8.572 8.693c-.25-.16-.384-.504-.386-.95L19 18.31c-.002-.488.175-.785.423-.932zm11.454 5.737l-2.484 2.52-8.356-8.36c.127.016.254.053.366.115l10.474 5.725zm.466 5.47l-2.59-2.592 2.587-2.624 3.565 1.95c.878.478.43 1.078 0 1.314l-3.562 1.953zm-11.17 6.106l8.222-8.338 2.484 2.485-10.477 5.746c-.08.043-.156.078-.23.106z" fill="#FFFFFF"></path>
+    </g>
+  </symbol>
+
+  <symbol id="badge-apple" viewBox="0 0 138 50">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M33.98 24.788c-.026-2.8 2.28-4.163 2.384-4.226-1.305-1.915-3.33-2.176-4.04-2.197-1.7-.18-3.348 1.023-4.214 1.023-.883 0-2.216-1.005-3.653-.976-1.85.03-3.58 1.105-4.527 2.777-1.958 3.408-.498 8.417 1.378 11.172.938 1.35 2.035 2.856 3.47 2.803 1.404-.058 1.928-.9 3.623-.9 1.68 0 2.172.9 3.635.865 1.507-.023 2.456-1.355 3.36-2.717 1.086-1.545 1.52-3.07 1.54-3.148-.036-.01-2.927-1.12-2.956-4.477zm-2.766-8.235c.755-.95 1.272-2.242 1.128-3.553-1.093.05-2.46.76-3.247 1.69-.696.818-1.318 2.16-1.158 3.42 1.228.093 2.49-.622 3.277-1.557zm25.1 18.418h-1.96l-1.076-3.395h-3.736l-1.024 3.396h-1.91L50.31 23.41h2.286l3.72 11.563zm-3.36-4.82l-.972-3.02c-.103-.308-.297-1.034-.58-2.178h-.034c-.115.492-.297 1.218-.547 2.18l-.954 3.018h3.088zm12.863.55c0 1.418-.382 2.54-1.15 3.36-.685.734-1.538 1.1-2.555 1.1-1.098 0-1.888-.394-2.367-1.184v4.375h-1.842v-8.976c0-.89-.024-1.804-.07-2.74h1.622l.102 1.322h.035c.614-.997 1.546-1.495 2.797-1.495.978 0 1.794.39 2.447 1.167.653.78.98 1.803.98 3.073zm-1.876.067c0-.81-.18-1.48-.545-2.007-.4-.548-.934-.823-1.604-.823-.453 0-.866.152-1.235.455-.37.303-.612.7-.725 1.193-.057.228-.086.415-.086.563v1.392c0 .604.185 1.116.555 1.535.37.417.85.626 1.44.626.694 0 1.234-.27 1.62-.805.387-.538.58-1.247.58-2.128zm11.413-.067c0 1.418-.382 2.54-1.15 3.36-.686.734-1.538 1.1-2.555 1.1-1.098 0-1.887-.394-2.368-1.184v4.375h-1.842v-8.976c0-.89-.023-1.804-.068-2.74h1.62l.103 1.322h.034c.614-.997 1.546-1.495 2.798-1.495.977 0 1.794.39 2.45 1.167.65.78.978 1.803.978 3.073zm-1.877.067c0-.81-.182-1.48-.547-2.007-.4-.548-.932-.823-1.603-.823-.454 0-.867.152-1.238.455-.37.303-.612.7-.725 1.193-.056.228-.087.415-.087.563v1.392c0 .604.186 1.116.554 1.535.37.416.85.626 1.443.626.695 0 1.235-.27 1.62-.805.387-.538.58-1.247.58-2.128zm12.54.96c0 .985-.342 1.785-1.023 2.403-.748.674-1.793 1.012-3.132 1.012-1.236 0-2.228-.24-2.976-.72l.426-1.544c.808.48 1.695.72 2.66.72.695 0 1.235-.157 1.62-.47.388-.316.582-.736.582-1.26 0-.47-.16-.865-.478-1.186-.32-.32-.846-.617-1.586-.89-2.013-.755-3.02-1.86-3.02-3.312 0-.95.356-1.726 1.065-2.333.71-.607 1.652-.91 2.824-.91 1.046 0 1.918.184 2.61.55l-.463 1.51c-.65-.355-1.386-.532-2.21-.532-.65 0-1.16.16-1.523.48-.306.286-.462.634-.462 1.048 0 .456.177.835.53 1.13.306.276.864.574 1.67.894.992.4 1.718.868 2.185 1.405.47.537.702 1.207.702 2.007v-.002zm6.105-3.703h-2.03v4.048c0 1.03.36 1.543 1.076 1.543.33 0 .602-.028.818-.086l.05 1.406c-.362.136-.84.205-1.43.205-.73 0-1.297-.224-1.708-.67-.41-.446-.614-1.194-.614-2.247V28.02h-1.21v-1.39h1.21v-1.527l1.81-.55v2.077h2.03v1.394zm9.144 2.71c0 1.28-.364 2.333-1.092 3.156-.76.846-1.774 1.27-3.036 1.27-1.218 0-2.187-.406-2.91-1.218-.722-.81-1.083-1.835-1.083-3.07 0-1.29.374-2.35 1.117-3.172.745-.823 1.75-1.236 3.012-1.236 1.217 0 2.193.408 2.934 1.218.707.788 1.058 1.804 1.058 3.052zm-1.91.042c0-.764-.163-1.42-.492-1.967-.387-.663-.94-.993-1.656-.993-.737 0-1.305.33-1.69.992-.33.547-.493 1.214-.493 2 0 .766.163 1.423.494 1.968.398.663.954.994 1.674.994.705 0 1.257-.34 1.657-1.01.338-.56.508-1.22.508-1.986zm7.9-2.514c-.182-.033-.377-.05-.58-.05-.648 0-1.15.244-1.502.738-.307.434-.46.983-.46 1.646v4.375h-1.842v-5.71c0-.96-.018-1.838-.053-2.626h1.604l.07 1.595h.05c.195-.55.5-.99.92-1.32.412-.3.854-.45 1.332-.45.17 0 .324.014.46.035l.002 1.767zm8.24 2.146c0 .33-.023.61-.07.84H109.9c.02.823.288 1.454.8 1.89.466.386 1.07.58 1.808.58.82 0 1.565-.13 2.236-.394l.29 1.286c-.786.343-1.713.515-2.78.515-1.286 0-2.296-.38-3.03-1.14-.732-.76-1.1-1.783-1.1-3.062 0-1.256.34-2.303 1.025-3.138.714-.89 1.68-1.337 2.898-1.337 1.195 0 2.1.446 2.713 1.337.488.707.733 1.582.733 2.622zm-1.758-.48c.013-.55-.108-1.024-.358-1.425-.318-.516-.81-.773-1.467-.773-.602 0-1.092.25-1.465.755-.307.4-.49.882-.545 1.44l3.836.002zM53.066 18.27H52.1l-.527-1.67h-1.836l-.504 1.67h-.94l1.82-5.683h1.124l1.83 5.683zm-1.652-2.37l-.478-1.484c-.05-.152-.143-.505-.285-1.07h-.017c-.058.244-.142.6-.268 1.07l-.47 1.484h1.52zm6.2-1.728l-1.542 4.098h-.88L53.7 14.172h.972l.696 2.167c.118.36.218.707.293 1.036h.026c.068-.295.168-.64.293-1.037l.687-2.168h.95-.002zM60.9 18.27l-.067-.472h-.025c-.276.38-.68.565-1.19.565-.73 0-1.25-.515-1.25-1.206 0-1.012.872-1.535 2.38-1.535v-.075c0-.54-.284-.81-.846-.81-.402 0-.755.102-1.064.304l-.184-.598c.378-.236.847-.354 1.4-.354 1.065 0 1.602.565 1.602 1.695v1.51c0 .413.018.734.06.978H60.9zm-.126-2.04c-1.006 0-1.51.244-1.51.825 0 .43.26.64.62.64.463 0 .89-.353.89-.833v-.633zm2.9-2.733c-.302 0-.537-.236-.537-.548 0-.313.242-.54.553-.54.31 0 .562.227.553.54 0 .328-.234.547-.57.547zm-.436.675h.905v4.098h-.905v-4.098zm2.514-1.88h.905v5.978h-.905v-5.978zm4.754 5.978l-.07-.472h-.023c-.276.38-.68.565-1.19.565-.73 0-1.25-.515-1.25-1.206 0-1.012.872-1.535 2.38-1.535v-.075c0-.54-.284-.81-.845-.81-.403 0-.756.102-1.065.304l-.185-.598c.378-.237.847-.355 1.4-.355 1.065 0 1.604.565 1.604 1.695v1.51c0 .413.017.734.057.978h-.814zm-.126-2.04c-1.007 0-1.51.244-1.51.825 0 .43.26.64.62.64.462 0 .89-.353.89-.833v-.633zm4.55 2.133c-.58 0-1.005-.245-1.283-.726h-.017l-.052.633h-.77c.024-.33.032-.7.032-1.105v-4.873h.907v2.48h.017c.27-.456.704-.683 1.3-.683.98 0 1.67.842 1.67 2.073 0 1.272-.765 2.2-1.805 2.2zm-.185-3.56c-.52 0-.998.456-.998 1.09v.716c0 .563.43 1.027.982 1.027.677 0 1.082-.556 1.082-1.44 0-.827-.42-1.393-1.066-1.393zm3.328-2.51h.904v5.977h-.904v-5.978zm5.833 4.147h-2.718c.018.776.527 1.214 1.282 1.214.403 0 .772-.068 1.1-.194l.14.633c-.386.168-.84.252-1.366.252-1.276 0-2.03-.81-2.03-2.065 0-1.256.772-2.2 1.928-2.2 1.04 0 1.695.775 1.695 1.947.002.16-.005.303-.03.413zm-.83-.65c0-.632-.32-1.078-.898-1.078-.52 0-.93.455-.99 1.08h1.888zm6.318 2.573c-1.19 0-1.962-.894-1.962-2.108 0-1.265.788-2.167 2.03-2.167 1.173 0 1.962.85 1.962 2.1 0 1.28-.814 2.175-2.03 2.175zm.034-3.61c-.654 0-1.073.616-1.073 1.476 0 .843.428 1.458 1.065 1.458.636 0 1.064-.658 1.064-1.476 0-.835-.42-1.458-1.056-1.458zm6.864 3.517h-.904v-2.353c0-.725-.277-1.088-.822-1.088-.537 0-.906.463-.906 1.003v2.437h-.904v-2.926c0-.363-.01-.75-.035-1.172h.798l.042.632h.026c.24-.438.737-.717 1.29-.717.854 0 1.416.658 1.416 1.728v2.455zm5.925-3.415h-.997v1.99c0 .507.176.76.528.76.158 0 .294-.018.402-.043l.025.69c-.176.07-.412.103-.703.103-.715 0-1.14-.396-1.14-1.434v-2.065h-.594v-.683h.594v-.75l.888-.27v1.02h.996v.683zm4.795 3.415h-.906v-2.336c0-.733-.278-1.104-.822-1.104-.47 0-.905.32-.905.97v2.47h-.907v-5.978h.906v2.46h.017c.284-.445.696-.665 1.224-.665.864 0 1.392.674 1.392 1.746v2.437zm4.627-1.83h-2.72c.02.776.53 1.214 1.284 1.214.404 0 .772-.068 1.097-.194l.143.633c-.385.168-.838.252-1.367.252-1.275 0-2.03-.81-2.03-2.065 0-1.256.773-2.2 1.93-2.2 1.038 0 1.693.775 1.693 1.947.002.16-.006.303-.03.413zm-.832-.65c0-.632-.318-1.078-.896-1.078-.52 0-.93.455-.99 1.08h1.886z" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+  </symbol>
+
+  <symbol id="arrow-right">
+    <g width="21" height="15">
+      <path d="M15.441 8.342H1.439C.705 8.342.11 7.75.11 7.024v-.031c0-.728.593-1.318 1.33-1.318h13.976l-3.4-3.4A1.332 1.332 0 1 1 13.9.388l5.578 5.577c.114.114.203.243.268.38a1.3 1.3 0 0 1 .17.647v.031c0 .026 0 .053-.002.079a1.337 1.337 0 0 1-.394.93l-5.578 5.578a1.332 1.332 0 1 1-1.886-1.886l3.385-3.383z" fill="#3556FA" fill-rule="evenodd"></path>
+    </g>
+  </symbol>
+
+  <symbol id="arrow-right-white">
+    <g width="21" height="15">
+      <path d="M15.441 8.342H1.439C.705 8.342.11 7.75.11 7.024v-.031c0-.728.593-1.318 1.33-1.318h13.976l-3.4-3.4A1.332 1.332 0 1 1 13.9.388l5.578 5.577c.114.114.203.243.268.38a1.3 1.3 0 0 1 .17.647v.031c0 .026 0 .053-.002.079a1.337 1.337 0 0 1-.394.93l-5.578 5.578a1.332 1.332 0 1 1-1.886-1.886l3.385-3.383z" fill="#FFFFFF" fill-rule="evenodd"></path>
+    </g>
+  </symbol>
+
+  <symbol id="status-error">
+    <g width="16" height="16">
+      <path d="M9.898 8.008l5.12 5.12c.522.522.524 1.358.009 1.872l-.022.023a1.325 1.325 0 0 1-1.873-.01l-5.12-5.119-5.119 5.12c-.52.52-1.359.522-1.872.009L.999 15a1.322 1.322 0 0 1 .009-1.872l5.12-5.12-5.12-5.12a1.322 1.322 0 0 1-.01-1.872l.023-.022a1.325 1.325 0 0 1 1.872.01l5.12 5.119 5.12-5.12c.519-.52 1.359-.522 1.872-.009l.022.022c.515.515.513 1.351-.009 1.873l-5.12 5.12z" fill="#F23838" fill-rule="evenodd"></path>
+    </g>
+  </symbol>
+
+  <symbol id="status-complete">
+    <g width="17" height="13">
+      <path d="M5.879 8.818L14.257.439a1.5 1.5 0 1 1 2.122 2.122L7 11.939a1.5 1.5 0 0 1-2.149-.028 1.497 1.497 0 0 1-.416-.294L.439 7.621A1.5 1.5 0 1 1 2.561 5.5l3.318 3.318z" fill="#1DE6BD" fill-rule="evenodd"></path>
+    </g>
+  </symbol>
+
+  <symbol id="carrot-right" width="7" height="10">
+    <path fill="#3556FA" d="M.29289322 1.70710678L1.70710678.29289322 6.41421356 5 1.70710678 9.70710678.29289322 8.29289322 3.58578644 5z"></path>
+  </symbol>
+
+</svg>
+
+	<section class="section-wrapper blue site-hero background-pattern">
+		<div class="layout-container site-hero-container">
+			<header class="site-header">
+				<a href="https://basket.com/"><svg class="icon-logo"><use xlink:href="#logo"></use></svg></a>
+				<a href="#" class="mobile-nav-toggle js-mobile-nav-toggle">
+					<svg class="icon-hamburger open"><use xlink:href="#hamburger"></use></svg>
+					<svg class="icon-hamburger-x close"><use xlink:href="#hamburger-x"></use></svg>
+				</a>
+				<nav class="main-nav">
+					<div class="nav-links-container">
+						<div class="menu-header-menu-container"><ul id="menu-header-menu" class="menu"><li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-11 current_page_item menu-item-60"><a href="https://basket.com/" aria-current="page">Home</a></li>
+<li id="menu-item-386" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-386"><a href="https://basket.com/savings">Personal Circular</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="https://basket.com/opportunities/">Opportunities</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-66"><a href="https://basket.com/blog/">Blog</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-360" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-360"><a href="https://basket.com/blog/category/for-shoppers/">For Shoppers</a></li>
+	<li id="menu-item-361" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-361"><a href="https://basket.com/blog/category/for-businesses/">For Businesses</a></li>
+</ul>
+</li>
+<li id="menu-item-368" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-368"><a href="http://www.basket-insights.com/">Business</a></li>
+</ul></div>					</div>
+				</nav>
+			</header>
+			<div class="grid">
+				<div class="hero-content">
+					<div class="subgrid">
+						<span class="site-main-title white">Never overpay for groceries again.</span>
+						<div class="hero-subtitle">
+							<div class="hero-action">
+								<a class="badge-icon" href="https://itunes.apple.com/us/app/basket-savings/id1060139875?mt=8">
+									<svg class="badge-apple"><use xlink:href="#badge-apple"></use></svg>
+								</a>
+								<a class="badge-icon" href="https://play.google.com/store/apps/details?id=com.basketsavings.basket&amp;hl=en">
+									<svg class="badge-google"><use xlink:href="#badge-google"></use></svg>
+								</a>
+							</div>
+						</div>
+						<div class="hero-details">
+							<h1 class="hero-details-heading heading-alt--4 white former-h2">Basket is the first smart grocery shopping app built for shoppers, by shoppers.</h1>
+							<p class="white">We’re the largest community of grocery shoppers 
+in the world working together to save each other time and money on 
+groceries and everyday purchases. Basket lets you compare in-store and 
+online prices, giving you choices and putting you in control.</p>
+						</div>
+					</div>
+				</div>
+				<div class="hero-ios-image">
+					<img class="hero-phone-preview" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/hero-iphone.png" alt="Basket phone app">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="community" class="section-wrapper community">
+		<div class="layout-container">
+
+			<div class="community-testimonies main-carousel flickity-enabled" tabindex="0">
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			<div class="flickity-viewport" style="height: 180px;"><div class="flickity-slider" style="left: 0px; transform: translate3d(-104.88%, 0px, 0px);"><div class="testimony-container carousel-cell" style="position: absolute; left: 0%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-1.png" alt="Linda K. Avatar">
+					<div class="testimony-content">
+						<p>"Seeing the store price with what's on sale is a dream! I saved tons of time &amp; $100 – just this month!"</p>
+						<p>
+							<span class="testimony-author">Linda K.</span>
+							<span class="testimony-location">Atlanta, GA</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 24.17%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-2.png" alt="Carole D. Avatar">
+					<div class="testimony-content">
+						<p>"Being able to get pricing before going into different stores saves me so much time!"</p>
+						<p>
+							<span class="testimony-author">Carole D.</span>
+							<span class="testimony-location">Fresno, CA</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 48.33%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-3.png" alt="Amanda L. Avatar">
+					<div class="testimony-content">
+						<p>"I love seeing comparing prices between stores. I saved $34 on my last grocery trip. Thank you Basket!"</p>
+						<p>
+							<span class="testimony-author">Amanda L.</span>
+							<span class="testimony-location">Wasington, DC</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 72.5%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-5.png" alt="Janice J. Avatar">
+					<div class="testimony-content">
+						<p>"I didn’t know some stores had certain products, and getting the best price for them made by day!"</p>
+						<p>
+							<span class="testimony-author">Janice J.</span>
+							<span class="testimony-location">Richmond, VA</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 96.67%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-4.png" alt="Cleo B. Avatar">
+					<div class="testimony-content">
+						<p>"I love saving time and money for things that make me happy, Basket let's me do that."</p>
+						<p>
+							<span class="testimony-author">Cleo B.</span>
+							<span class="testimony-location">New Jersey</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 120.83%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-1.png" alt="Linda K. Avatar">
+					<div class="testimony-content">
+						<p>"Seeing the store price with what's on sale is a dream! I saved tons of time &amp; $100 – just this month!"</p>
+						<p>
+							<span class="testimony-author">Linda K.</span>
+							<span class="testimony-location">Atlanta, GA</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell is-selected" style="position: absolute; left: 145%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-2.png" alt="Carole D. Avatar">
+					<div class="testimony-content">
+						<p>"Being able to get pricing before going into different stores saves me so much time!"</p>
+						<p>
+							<span class="testimony-author">Carole D.</span>
+							<span class="testimony-location">Fresno, CA</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 169.17%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-3.png" alt="Amanda L. Avatar">
+					<div class="testimony-content">
+						<p>"I love seeing comparing prices between stores. I saved $34 on my last grocery trip. Thank you Basket!"</p>
+						<p>
+							<span class="testimony-author">Amanda L.</span>
+							<span class="testimony-location">Wasington, DC</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 193.33%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-5.png" alt="Janice J. Avatar">
+					<div class="testimony-content">
+						<p>"I didn’t know some stores had certain products, and getting the best price for them made by day!"</p>
+						<p>
+							<span class="testimony-author">Janice J.</span>
+							<span class="testimony-location">Richmond, VA</span>
+						</p>
+					</div>
+				</div><div class="testimony-container carousel-cell" style="position: absolute; left: 217.5%;">
+					<img class="testimony-image" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/avatar-4.png" alt="Cleo B. Avatar">
+					<div class="testimony-content">
+						<p>"I love saving time and money for things that make me happy, Basket let's me do that."</p>
+						<p>
+							<span class="testimony-author">Cleo B.</span>
+							<span class="testimony-location">New Jersey</span>
+						</p>
+					</div>
+				</div></div></div></div>
+
+			<div class="grid justify-center carousel-wrapper">
+				<div class="block-8">
+					<h2 class="heading-alt--2 blue">Join the Basket community</h2>
+				</div>
+				<div class="block-7">
+					<p>Through crowd-sourcing, our community of shoppers share 
+real-time prices on products and inventory. Basket gives shoppers the 
+power to make their best decision, every time, every trip.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="compare" class="section-wrapper blue compare-prices">
+		<div class="layout-container">
+			<div class="grid vertically-centered">
+				<div class="block-6 compare-prices-preview">
+					<div class="phone-carousel">
+						<div class="phone-carousel-background"></div>
+						<div class="phone-carousel-cell">
+							<img class="" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/compare-list.png">
+						</div>
+						<div class="phone-carousel-cell right">
+							<img class="" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/compare-map.png">
+						</div>
+						<div class="phone-carousel-image"></div>
+					</div>
+
+
+				</div>
+				<div class="block-5">
+					<div class="pindrop-container">
+						<svg class="icon-pindrop"><use xlink:href="#icon-pindrop"></use></svg>
+					</div>
+					<h2 class="heading-alt--2 white">Compare Grocery Prices Near You and Online Too</h2>
+					<p class="white">Create your shopping list in Basket and you’ll 
+instantly see which stores have your favorite products and what the 
+total price is at each store. Local and online prices vary as much as 30
+ to 40 percent each week, so check Basket every time. On a time crunch? 
+Compare prices for online retailers too. (Spoiler: you’ll likely pay for
+ the convenience).</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-wrapper cta">
+		<div class="layout-container  cta-container">
+			<div class="grid vertically-centered">
+				<div class="cta-text">
+					<h2 class="heading-alt--4">Download the Basket app <span class="lightweight">to see your real-time savings!</span></h2>
+				</div>
+				<div class="cta-action">
+					<a class="badge-icon" href="https://itunes.apple.com/us/app/basket-savings/id1060139875?mt=8">
+						<svg class="badge-apple"><use xlink:href="#badge-apple"></use></svg>
+					</a>
+					<a class="badge-icon" href="https://play.google.com/store/apps/details?id=com.basketsavings.basket&amp;hl=en">
+						<svg class="badge-google"><use xlink:href="#badge-google"></use></svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="how-basket-works" class="section-wrapper how-basket-works">
+		<div class="layout-container">
+			<h2 class="heading-alt--2 blue text-centered">How Basket Works</h2>
+			<div class="grid">
+				<div class="block-4 how-basket-works-item">
+					<svg class="how-basket-works-icon icon-plan"><use xlink:href="#icon-plan"></use></svg>
+					<h3 class="orange">Create</h3>
+					<p>Start your smart shopping list anywhere, anytime, and ditch the old paper copy.</p>
+				</div>
+				<div class="block-4 how-basket-works-item">
+					<svg class="how-basket-works-icon icon-save"><use xlink:href="#icon-save"></use></svg>
+					<h3 class="purple">Save</h3>
+					<p>See how prices compare today locally and online. You’ll see updated sales and coupons too.</p>
+				</div>
+				<div class="block-4 how-basket-works-item">
+					<svg class="how-basket-works-icon icon-shop"><use xlink:href="#icon-shop-teal"></use></svg>
+					<h3 class="green">Shop</h3>
+					<p>Congrats! You’ve got the information you need to make a brighter decision on your Basket.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-wrapper logo-list">
+		<div class="layout-container">
+			<div class="grid justify-center">
+				<div class="block-10 logo-container">
+					<div class="logo-list-container subgrid text-centered justify-center">
+						<div class="logo-list-item">
+							<img class="costco" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--costco.png" alt="">
+						</div>
+						<div class="logo-list-item">
+							<img class="whole-foods" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--whole-foods.png" alt="Costco Logo">
+						</div>
+						<div class="logo-list-item">
+							<img class="kroger" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--kroger.png" alt="Kroger Logo">
+						</div>
+						<div class="logo-list-item">
+							<img class="amazon" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--amazon.png" alt="Amazon Logo">
+						</div>
+						<div class="logo-list-item">
+							<img class="publix" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--publix.png" alt="Publix Logo">
+						</div>
+						<div class="logo-list-item">
+							<img class="walmart" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--walmart.png" alt="Walmart Logo">
+						</div>
+						<div class="logo-list-item">
+							<img class="safeway" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--safeway.png" alt="Safeway Logo">
+						</div>
+						<div class="logo-list-item">
+							<img class="target" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/logo--target.png" alt="Target Logo">
+						</div>
+					</div>
+				</div>
+				<div class="block-6 logo-text-container text-centered">
+					<h2 class="heading-alt--3">And hundreds more.</h2>
+					<p>Download Basket to see stores in your area.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="layout-container">
+
+    <div class="grid vertically-centered">
+      <div class="footer-section-one">
+        <div class="footer-logo">
+          <svg class="footer-brandmark logo-small"><use xlink:href="#logo-small"></use></svg>
+        </div>
+        <a href="https://basket.com/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-11 current_page_item">Home</a>
+<a href="https://basket.com/?page_id=53" class="menu-item menu-item-type-post_type menu-item-object-page">Business</a>
+<a href="https://basket.com/opportunities/" class="menu-item menu-item-type-post_type menu-item-object-page">Opportunities</a>
+<a href="https://basket.com/blog/" class="menu-item menu-item-type-post_type menu-item-object-page">Blog</a>
+<a target="_blank" href="https://jobs.lever.co/basket" class="menu-item menu-item-type-custom menu-item-object-custom">Careers</a>
+      </div>
+
+      <div class="footer-section-two">
+        <div class="footer-privacy-links">
+          <a class="footer-privacy-link" href="https://basket.com/privacy-terms/">Privacy</a>
+<a class="footer-privacy-link" href="https://basket.com/terms-of-service/">Terms of Service</a>
+        </div>
+        <div class="footer-social-links">
+          <a class="footer-social-link" href="https://twitter.com/basketsavings">
+            <svg class="social-twitter"><use xlink:href="#social-twitter"></use></svg>
+          </a>
+          <a class="footer-social-link" href="https://www.facebook.com/basketsaving/">
+            <svg class="social-facebook"><use xlink:href="#social-facebook"></use></svg>
+          </a>
+          <a class="footer-social-link" href="https://www.instagram.com/basketsavings/">
+            <svg class="social-instagram"><use xlink:href="#social-instagram"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-copyright text-centered">© Copyright 2021 Basket Savings. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/libs.js" charset="utf-8"></script>
+<script src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/main.js" charset="utf-8"></script>
+
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/basket.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/scripts.js" id="contact-form-7-js"></script>
+<script type="text/javascript" src="Basket%20|%20Smart%20Grocery%20Shopping%20List%20App%20|%20Compare%20Grocery%20Prices_files/wp-embed.js" id="wp-embed-js"></script>
+
+
+
+</body></html>
