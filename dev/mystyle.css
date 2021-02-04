@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(13, 10, 196);
+    padding: 25px 50px 75px 100px;
+}
+
+.logo_bg {
+    display: block;
+    margin-left: 0;
+    width: 40%;
+    background-color: rgb(13, 10, 196);
+}
+
+.nav-item {
+    background-color: rgb(13, 10, 196);
+    color: white;
+}
+
+h1 {
+    padding-top: 10%;
+    width: 40%;
+    font-size-adjust: .5;
+    background-color: rgb(13, 10, 196);
+}
+
+.heding_after_mb {
+    margin-right: 0;
+}
